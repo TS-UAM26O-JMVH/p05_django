@@ -441,7 +441,9 @@ class ProductoViewSet(viewsets.ViewSet):
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR
             )
         
-##############################Codigo 30##########################################
+    #Codigo 30. Servicio: activar un producto.
+    #este endpointpersonalizdo permite reactivar un producto previamente desactivado.
+    #usa una solicitud HTTP PATCH, cambiando el atributo status.
     @action(detail=True, methods=["patch"])
     @swagger_auto_schema(
         operation_summary="Activar un producto",

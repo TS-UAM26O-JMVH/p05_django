@@ -258,7 +258,7 @@ class ProductoDAO:
         producto.save()
         return producto
     
-    #Codigo 29. 
+    #Codigo 29. implementa metodo descativar_producto(), elcual permite modificar el estado activo de un producto sin eliminarlo
     @staticmethod
     def desactivar_producto(pk):
         try:
@@ -277,7 +277,9 @@ class ProductoDAO:
             producto.save()
 
         return producto
-################################Codigo 31##########################################
+    
+    #Codigo 31. Implementa el metodo activar_producto()
+    #restablece el estado activo a un producto desactivado previamente.
     @staticmethod
     def activar_producto(pk):
         try:
@@ -294,6 +296,6 @@ class ProductoDAO:
             raise ValidationError("El producto ya está activado")
 
         producto.status = True
-        producto.modified_at = timezone.now()
+        producto.modified_at = timezone.now() #->registra la fecha de modificacion
         producto.save()
         return producto
