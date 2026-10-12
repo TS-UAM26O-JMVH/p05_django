@@ -26,7 +26,7 @@ cd p05_django/proyectos_django/django4/proyecto_django/back_end_django
 ### 2. Levantar la base de datos con Docker compose
 asegurate de tener DOcker activo y ejecuta el sigiente comando en la raiz donde se encuentra tu Docker-compose.yml
 ```bash
-sudo docker compuse up -d
+sudo docker compose up -d
 ```
 ### 2.1 como detener la base de datos de Docker
 Cuando termines de trabajar y desees apagar el contenedor de PostgreSQL de forma limpia, ejecuta el siguiente comando en la misma ruta donde se encuentra tu docker-compose.yml:
