@@ -1,0 +1,16 @@
+#Codigo 4: usa el componente DefaultROuter de Django REST para registrar 
+#automaticamente todas las rutas que corresponden al ProductViewSet
+
+# gestion_productos/urls.py
+
+from django.urls import path, include
+from rest_framework.routers import DefaultRouter
+from .views import ProductoViewSet
+
+# Crear un router y registrar el ViewSet
+router = DefaultRouter()
+router.register(r'products', ProductoViewSet, basename='products')
+
+urlpatterns = [
+    path('', include(router.urls)),
+]
